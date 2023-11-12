@@ -1,0 +1,4111 @@
+
+
+/* ********** ----------   ШРИФТЫ   ---------- ********** */
+
+
+@font-face {
+	font-family: "JosefinSans";
+    src: local("JosefinSans"),
+		url("fonts/JosefinSans-Light.woff2") format("woff2"), 
+		url("fonts/JosefinSans-Light.woff") format("woff");
+	font-style: normal;
+	font-weight: 300;
+}
+
+
+@font-face {
+	font-family: "JosefinSans";
+    src: local("JosefinSans"),
+		url("fonts/JosefinSans-Regular.woff2") format("woff2"), 
+		url("fonts/JosefinSans-Regular.woff") format("woff");
+	font-style: normal;
+	font-weight: 400;
+}
+
+
+@font-face {
+	font-family: "JosefinSans";
+    src: local("JosefinSans"),
+		url("fonts/JosefinSans-SemiBold.woff2") format("woff2"), 
+		url("fonts/JosefinSans-SemiBold.woff") format("woff");
+	font-style: normal;
+	font-weight: 600;
+}
+
+
+@font-face {
+    font-family: "JosefinSans";
+    src: local("JosefinSans"),
+        url("fonts/JosefinSans-Bold.woff2") format("woff2"), 
+        url("fonts/JosefinSans-Bold.woff") format("woff");
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+@font-face {
+	font-family: "OpenSans";
+    src: local("OpenSans"),
+		url("fonts/OpenSans-Light.woff2") format("woff2"), 
+		url("fonts/OpenSans-Light.woff") format("woff");
+	font-style: normal;
+	font-weight: 300;
+}
+
+
+@font-face {
+	font-family: "PlayfairDisplay";
+    src: local("PlayfairDisplay"),
+		url("fonts/PlayfairDisplay-Regular.woff2") format("woff2"), 
+		url("fonts/PlayfairDisplay-Regular.woff") format("woff");
+	font-style: normal;
+	font-weight: 400;
+}
+
+
+@font-face {
+	font-family: "PlayfairDisplay";
+    src: local("PlayfairDisplay"),
+		url("fonts/PlayfairDisplay-Black.woff2") format("woff2"), 
+		url("fonts/PlayfairDisplay-Black.woff") format("woff");
+	font-style: normal;
+	font-weight: 900;
+}
+
+
+
+
+
+
+
+/* ********** ----------   ГЛОБАЛЬНЫЕ СВОЙСТВА   ---------- ********** */
+
+
+:root {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(210, 33%, 99%);
+}
+
+
+
+
+
+@media (min-width: 740px) {
+    body {
+        padding: 8vw 5vw;
+        background-color: hsl(0, 0%, 92%);
+    }
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    body {
+        padding: 8vw 10vw;
+    }
+}
+
+
+
+
+
+
+
+/* ********** ----------   HEADER   ---------- **********  */
+
+
+.header {
+    display: none;
+}
+
+
+
+
+
+@media (min-width: 740px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8vw;
+    }
+
+    .header--img__MAIN_LOGO {
+        width: 27vw;
+    }
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    .header--img {
+        width: 30vw;
+    }
+}
+
+
+
+
+
+
+
+/* ********** ----------   NAV   ---------- **********  */
+
+
+.nav {
+    padding: 10vw;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: inherit;
+}
+
+
+.nav--img__LOGO {
+    margin-right: auto;
+    width: 25vw;
+}
+
+
+.nav--ul__MENU {
+    width: 100vw;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 30vw;
+    left: 0;
+    text-align: center;
+    list-style-type: none;
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+.nav--li__MENU_PUNKT {
+    padding: 5.5vw 0;
+    display: block;
+    background-color: hsl(218, 60%, 95%);
+    border-top: 1px solid hsl(0, 0%, 52%);
+    border-bottom: none;
+}
+.nav--li__MENU_PUNKT:last-child {
+    border-bottom: 1px solid hsl(0, 0%, 52%);
+}
+.nav--li__MENU_PUNKT:nth-child(2) {
+    position: relative;
+}
+
+
+.nav--a__MENU_LINK {
+    padding-top: 1vw;
+    display: block;
+    font-family: "JosefinSans";
+    font-weight: 300;
+    font-size: 4vw;
+    line-height: 1.2;
+    color: hsl(0, 0%, 0%);
+}
+.nav--a__MENU_LINK:active {
+    color: hsl(0, 0%, 45%);
+}
+
+
+.nav--i {
+    padding: 1vw;
+    position: absolute;
+    top: 5.5vw;
+    right: 30vw;
+    font-size: 4vw;
+    color: hsl(0, 0%, 30%);
+}
+.nav--i:active {
+    color: hsl(0, 0%, 60%);
+}
+
+
+.nav--ul__SUBMENU {
+    margin: 5vw 0 -5vw;
+    display: none;
+    flex-direction: column;
+    z-index: 2;
+    background-color: hsl(218, 5%, 95%);
+    list-style-type: none;
+}
+
+
+.nav--li__SUBMENU_PUNKT {
+    padding: 5vw 0;
+    display: block;
+    border-top: 1px solid hsl(0, 0%, 62%);
+    border-bottom: none;
+}
+
+
+.nav--a__SUBMENU_LINK {
+    padding-top: 1vw;
+    display: block;
+    font-family: "JosefinSans";
+    font-weight: 300;
+    font-size: 3vw;
+    color: hsl(0, 0%, 0%);
+}
+.nav--a__SUBMENU_LINK:active {
+    color: hsl(0, 0%, 45%);
+}
+
+
+.nav--label__FOR_SEARCH {
+    position: relative;
+}
+.nav--label__FOR_SEARCH::before {
+    position: absolute;
+    top: 2vw;
+    left: 2.5vw;
+    content: "\f002";
+    font-family: "Font Awesome 6 Free";
+	font-weight: bold;
+    font-size: 4vw;
+    color: hsl(0, 0%, 76%);
+}
+
+
+.nav--input__SEARCH {
+    padding: 1.7vw 1vw 1.2vw 9vw;
+    width: 40vw;
+    font-family: "JosefinSans";
+    font-weight: 300;
+    font-size: 4.5vw;
+    line-height: 1.2;
+    color: hsl(0, 0%, 0%);
+    background-color: inherit;
+    border: none;
+}
+.nav--input__SEARCH::placeholder {
+    font-family: "JosefinSans";
+    font-weight: 300;
+    font-size: 3.7vw;
+    line-height: 0;
+    color: hsl(0, 0%, 0%);
+}
+
+
+.nav--button__BURGER {
+    margin: 0.5vw 0 0 4vw;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+.nav--button__BURGER:active {
+    filter: brightness(250%);
+}
+
+
+.nav--img__BURGER {
+    width: 8vw;
+}
+
+
+
+
+
+@media (min-width: 740px) {
+    .nav {
+        padding: 1.5vw 6vw;
+        justify-content: space-between;
+        background-color: hsl(0, 0%, 97%);
+        box-shadow: 0 0 1vw 0 hsla(180, 4%, 5%, 0.15);
+    }
+
+    .nav--img__LOGO {
+        margin: 0;
+        width: 8vw;
+    }
+
+    .nav--ul__MENU {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        position: static;
+        gap: 1.8vw;
+        list-style-type: none;
+        background-color: transparent;
+    }
+
+    .nav--li__MENU_PUNKT {
+        padding: 1.5vw 0;
+        background-color: transparent;
+        border: none;
+    }
+    .nav--li__MENU_PUNKT:last-child {
+        border: none;
+    }
+
+    .nav--a__MENU_LINK {
+        padding-top: 0.5vw;
+        font-size: 1.5vw;
+        text-decoration: none;
+    }
+    @media (any-hover: hover) {
+        .nav--li__MENU_PUNKT:nth-child(2):hover .nav--ul__SUBMENU {
+            display: flex;
+        }
+        .nav--a__MENU_LINK:hover {
+            color: hsl(0, 0%, 40%)
+        }
+    }
+    .nav--a__MENU_LINK:active {
+        color: hsl(0, 0%, 25%);
+    }
+    @media (any-hover: none) {
+        .nav--a__MENU_LINK:active {
+            color: hsl(0, 0%, 45%);
+        }
+    }
+
+    .nav--i {
+        padding: 0.5vw;
+        top: 3.8vw;
+        right: 2.1vw;
+        font-size: 1vw;
+    }
+    @media (any-hover: hover) {
+        .nav--i {
+            display: none;
+        }
+    }
+
+    .nav--ul__SUBMENU {
+        padding: 1vw 2vw;
+        display: none;
+        position: absolute;
+        top: 1.5vw;
+        left: -3.3vw;
+        flex-direction: column;
+        align-items: flex-start;
+        list-style-type: none;
+        opacity: 0.8;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0.2vw 0.5vw 0 hsla(180, 4%, 5%, 0.14);
+    }
+    @media (any-hover: hover) {
+        .nav--ul__SUBMENU {
+            top: 0;
+        }
+    }
+
+    .nav--li__SUBMENU_PUNKT {
+        padding: 0.5vw 0;
+        border: none;
+    }
+
+    .nav--a__SUBMENU_LINK {
+        padding-top: 0.4vw;
+        font-size: 1.1vw;
+        line-height: 1.7;
+        letter-spacing: 0.025em;
+        color: hsl(0, 0%, 32%);
+        text-decoration: none;
+    }
+    @media (any-hover:hover) {
+        .nav--a__SUBMENU_LINK:hover {
+            color: hsl(0, 0%, 15%);
+            text-decoration: underline;
+        }
+    }
+    .nav--a__SUBMENU_LINK:active {
+        color: hsl(0, 0%, 0%);
+    }
+    @media (any-hover: none) {
+        .nav--a__SUBMENU_LINK:active {
+            color: hsl(0, 0%, 60%);
+        }
+    }
+
+    .nav--label__FOR_SEARCH::before {
+        top: 1.14vw;
+        left: 1.5vw;
+        font-size: 1.2vw;
+    }
+
+   .nav--input__SEARCH {
+        padding: 0.5vw 0.8vw 0.4vw 3.2vw;
+        width: 14vw;
+        font-size: 2vw;
+        border: 1px solid hsl(0, 0%, 76%);
+    }
+    .nav--input__SEARCH::placeholder {
+        font-size: 1.3vw;
+        line-height: 1.2;
+    }
+
+    .nav--button__BURGER {
+        display: none;
+    }
+}
+
+
+
+
+
+@media (min-width: 950px) {
+    .nav--ul__MENU {
+        gap: 2.5vw;
+    }
+
+    .nav--a__MENU_LINK {
+        font-size: 1.3vw;
+    }
+
+    .nav--i {
+        right: 1.6vw;
+    }
+
+    .nav--ul__SUBMENU {
+        left: -4vw;
+    }
+
+    .nav--input__SEARCH {
+        padding: 0.4vw 0.8vw 0.4vw 3.2vw;
+    }
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    .nav {
+        padding: 2vw 6vw;
+        box-shadow: 0 0 0.6vw 0 hsla(180, 4%, 5%, 0.15);
+    }
+    .nav--img__LOGO {
+        width: 6vw;
+    }
+    .nav--ul__MENU {
+        margin-top: 0.5vw;
+        gap: 1.7vw;
+    }
+    .nav--a__MENU_LINK {
+        font-size: 1.2vw;
+    }
+
+    .nav--ul__SUBMENU {
+        padding: 1.5vw 2vw;
+        top: 0;
+        left: -3.5vw;
+        gap: 1.1vw;
+        opacity: 0.8;
+    }
+    .nav--li__SUBMENU_PUNKT {
+        padding: 0.8vw 0;
+    }
+    .nav--a__SUBMENU_LINK {
+        padding-top: 0.2vw;
+        font-size: 0.9vw;
+        line-height: 0;
+        letter-spacing: 0.025em;
+        color: hsl(0, 0%, 32%);
+    }
+    .nav--label__FOR_SEARCH::before {
+        top: 0.66vw;
+        left: 1.2vw;
+        font-size: 1vw;
+    }
+    .nav--input__SEARCH {
+        padding: 0.23vw 0.8vw 0.2vw 2.7vw;
+        width: 11.25vw;
+        font-size: 1.5vw;
+    }
+    .nav--input__SEARCH::placeholder {
+        margin-top: 1vw;
+        font-size: 0.95vw;
+        line-height: 1.4;
+    }
+}
+
+
+
+
+
+
+
+/* ********** ----------   СЕКЦИЯ HERO   ---------- **********  */
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hero--img__HERO_MOBILE {
+    width: 100vw;
+}
+
+
+.hero--a__LINK_MOBILE {
+    margin: 7vw auto;
+    padding-top: 2vw;
+    font-family: "JosefinSans";
+    font-weight: 300;
+    font-size: 5.6vw;
+    line-height: 1.2;
+    letter-spacing: 0.025em;
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+}
+.hero--a__LINK_MOBILE:active {
+    color: hsl(0, 0%, 45%);
+}
+
+
+.hero--div__SWIPER {
+    display: none;
+}
+
+
+
+
+
+@media (min-width: 740px) {
+    .hero--img__HERO_MOBILE,
+    .hero--a__LINK_MOBILE {
+        display: none;
+    }
+
+    .hero {
+        margin-top: 5vw;
+        box-shadow: 0 0 1vw 0 hsla(180, 4%, 5%, 0.15);
+    }
+
+    .hero--div__SWIPER {
+        margin: 0;
+        min-width: 0;
+        display: block;
+    }
+
+    .hero--div__SWIPER_WRAPPER {
+        box-sizing: border-box;
+    }
+
+    .hero--div__SWIPER_SLIDE {
+        padding: 4vw 6vw;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5vw;
+        align-items: flex-start;
+        background: url("images/hero.png") 10vw / cover no-repeat hsl(120, 7%, 97%);
+    }
+
+    .hero--div__SWIPER .swiper-pagination-bullets {
+        width: auto;
+        right: 2vw;
+        left: auto;
+        bottom: 2vw;
+    }
+
+    .hero--div__SWIPER .swiper-pagination-bullet {
+        opacity: 1;
+        background-color: hsl(0, 0%, 100%);
+    }
+
+    .hero--div__SWIPER .swiper-pagination-bullet-active {
+        background-color: hsl(0, 0%, 33%);
+    }
+
+    .hero--img__HERO_LOGO {
+        width: 17.5vw;
+    }
+
+    .hero--h2 {
+        font-family: "PlayfairDisplay";
+        font-weight: 400;
+        font-size: 2.5vw;
+        line-height: 1.2;
+        letter-spacing: 0.025em;
+        color: hsl(350, 80%, 32%);
+    }
+
+    .hero--p {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.7vw;
+        line-height: 1.2;
+        letter-spacing: 0.025em;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .hero--a__LINK_DESKTOP {
+        padding: 0.85vw 1.3vw 0.5vw;
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.3vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        text-decoration: none;
+        border: 1px solid hsl(0, 0%, 65%);
+    }
+    @media (any-hover: hover) {
+        .hero--a__LINK_DESKTOP:hover {
+            color: hsl(0, 0%, 35%);
+            border-color: hsl(0, 0%, 77%);
+        }
+    }
+    .hero--a__LINK_DESKTOP:active {
+        color: hsl(0, 0%, 15%);
+        border-color: hsl(0, 0%, 70%);
+    }
+    @media (any-hover: none) {
+        .hero--a__LINK_DESKTOP:active {
+            color: hsl(0, 0%, 45%);
+            border-color: hsl(0, 0%, 80%);
+        }
+    }
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    .hero--div__SWIPER_SLIDE {
+        gap: 2vw;
+        background: url("images/hero.png") 2vw / cover no-repeat hsl(120, 7%, 97%);
+    }
+    .hero--h2 {
+        font-size: 1.7vw;
+    }
+    .hero--p {
+        font-size: 1.2vw;
+    }
+    .hero--a__LINK_DESKTOP {
+        padding: 0.5vw 0.9vw 0.3vw;
+        font-size: 0.9vw;
+    }
+}
+
+
+
+
+
+
+
+/* ********** ----------   СЕКЦИЯ GALLERY   ---------- **********  */
+
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.gallery--a__RECIPE {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.gallery--a__RECIPE:active .gallery--img__DISH_IMAGE {
+    filter: brightness(104%);
+}
+.gallery--a__RECIPE:active .gallery--p__FIRST {
+    color: hsl(0, 0%, 45%);
+}
+.gallery--a__RECIPE:active .gallery--span,
+.gallery--a__RECIPE:active .gallery--i {
+    color: hsl(0, 0%, 60%);
+}
+
+
+.gallery--img__DISH_IMAGE {
+    width: 100vw;
+}
+
+
+.gallery--div__TEXT {
+    padding: 5vw 6vw 8vw;
+}
+
+
+.gallery--p__FIRST {
+    padding-bottom: 1vw;
+    font-family: "JosefinSans";
+    font-weight: 300;
+    font-size: 5.5vw;
+    line-height: 1.2;
+    color: hsl(0, 0%, 0%);
+}
+
+
+.gallery--span {
+    font-family: "OpenSans";
+    font-weight: 300;
+    font-size: 4vw;
+    line-height: 1.2;
+    color: hsl(0, 0%, 33%);
+}
+
+
+.gallery--i {
+    font-size: 4vw;
+    line-height: 1.2;
+    color: hsl(0, 0%, 33%);
+}
+
+
+.zero--div__MOB_BORDER {
+    width: 100vw;
+    height: 1vw;
+    background-color: hsl(0, 0%, 33%);
+    opacity: 0.2;
+}
+
+
+
+
+
+@media (min-width: 740px) {
+    .gallery {
+        margin-top: 5vw;
+        padding: 4.5vw;
+        flex-direction: row;
+        gap: 4.5vw;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+
+    .gallery--a__RECIPE {
+        width: 24vw;
+    }
+    @media (any-hover: hover) {
+        .gallery--a__RECIPE:hover {
+            text-decoration: underline solid 0.05vw hsl(0, 0%, 55%);
+        }
+        .gallery--a__RECIPE:hover .gallery--img__DISH_IMAGE {
+            filter: brightness(104%);
+        }
+        .gallery--a__RECIPE:hover .gallery--p__FIRST {
+            color: hsl(0, 0%, 35%);
+            text-decoration: underline solid hsl(0, 0%, 55%) 0.05vw;
+        }
+        .gallery--a__RECIPE:hover .gallery--span,
+        .gallery--a__RECIPE:hover .gallery--i {
+            color: hsl(0, 0%, 45%);
+            text-decoration: underline solid hsl(0, 0%, 55%) 0.05vw;
+        }
+    }
+    .gallery--a__RECIPE:active {
+        text-decoration-color: hsl(0, 0%, 38%);
+    }
+    .gallery--a__RECIPE:active .gallery--img__DISH_IMAGE {
+        filter: brightness(102%);
+    }
+    .gallery--a__RECIPE:active .gallery--p__FIRST {
+        color: hsl(0, 0%, 20%);
+        text-decoration-color: hsl(0, 0%, 38%);
+    }
+    .gallery--a__RECIPE:active .gallery--span,
+    .gallery--a__RECIPE:active .gallery--i {
+        color: hsl(0, 0%, 30%);
+        text-decoration-color: hsl(0, 0%, 38%);
+    }
+    @media (any-hover: none) {
+        .gallery--a__RECIPE:active .gallery--img__DISH_IMAGE {
+            filter: brightness(104%);
+        }
+        .gallery--a__RECIPE:active .gallery--p__FIRST {
+            color: hsl(0, 0%, 45%);
+        }
+        .gallery--a__RECIPE:active .gallery--span,
+        .gallery--a__RECIPE:active .gallery--i {
+            color: hsl(0, 0%, 60%);
+        }
+    }
+
+    .gallery--img__DISH_IMAGE {
+        width: 100%;
+    }
+
+    .gallery--div__TEXT {
+        padding: 1.2vw 0 0;
+    }
+
+    .gallery--p__FIRST {
+        padding-bottom: 0.2vw;
+        font-size: 1.7vw;
+    }
+
+    .gallery--span {
+        margin-right: -0.2vw;
+        font-size: 1.2vw;
+    }
+
+    .gallery--i {
+        margin-right: -0.2vw;
+        font-size: 1.1vw;
+    }
+
+    .zero--div__MOB_BORDER {
+        display: none;
+    }
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    .gallery {
+        margin-top: 5vw;
+        padding: 3.5vw;
+        flex-direction: row;
+        gap: 3.5vw;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+    .gallery--a__RECIPE {
+        width: 22vw;
+    }
+    .gallery--img__DISH_IMAGE {
+        width: 100%;
+    }
+    .gallery--div__TEXT {
+        padding: 1.2vw 0 0;
+    }  
+    .gallery--p__FIRST {
+        padding-bottom: 0.2vw;
+        font-size: 1.3vw;
+    }
+    .gallery--span {
+        font-size: 0.9vw;
+        margin-right: 0;
+    }
+    .gallery--i {
+        font-size: 0.9vw;
+        margin-right: 0;
+    }
+}
+
+
+
+
+
+
+
+/* ********** ----------   СЕКЦИЯ RECIPE   ---------- **********  */
+
+
+.recipe {
+    display: none;
+}
+
+
+
+
+
+@media (min-width: 740px) {
+    .recipe {
+        margin-top: 5vw;
+        display: flex;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+
+    .recipe--img__MAIN {
+        width: 47%;
+    }
+
+    .recipe--div__CONTENT {
+       padding: 3vw 4vw 3vw 3vw;
+       width: 53%;
+       display: flex;
+       flex-direction: column;
+       gap: 1.8vw;
+    }
+
+    .recipe--h2 {
+        font-family: "PlayfairDisplay";
+        font-weight: 900;
+        font-size: 2.6vw;
+        line-height: 1.2;
+        color: hsl(180, 89%, 18%);
+        text-align: justify;
+    }
+
+    .recipe--div__INFO_AND_BUTTON {
+        padding-right: 2vw;
+        display: flex;
+        align-items: baseline;
+        gap: 0.5vw;
+    }
+
+    .recipe--i {
+        position: relative;
+        top: -0.1vw;
+        font-size: 1.4vw;
+    }
+
+    .recipe--span:first-of-type {
+        font-family: "OpenSans";
+        font-weight: 300;
+        font-size: 1.6vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+
+    .recipe--img__GRAPH {
+        position: relative;
+        top: 0.15vw;
+        width: 5%;
+    }
+
+    .recipe--span:last-of-type {
+        margin-right: auto;
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.7vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%)
+    }
+
+    .recipe--a__SAVE {
+        padding: 0.6vw 1.3vw 0.4vw;
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.1vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        background-color: hsl(0, 0%, 100%);
+        text-decoration: none;
+        border: 0.1vw solid hsl(0, 0%, 65%);
+        cursor: pointer;
+    }
+    @media (any-hover: hover) {
+        .recipe--a__SAVE:hover {
+            color: hsl(0, 0%, 35%);
+            border-color: hsl(0, 0%, 77%);
+        }
+    }
+    .recipe--a__SAVE:active {
+        color: hsl(0, 0%, 15%);
+        border-color: hsl(0, 0%, 70%);
+    }
+    @media (any-hover: none) {
+        .recipe--a__SAVE:active {
+            color: hsl(0, 0%, 45%);
+            border-color: hsl(0, 0%, 80%);
+        }
+    }
+
+    .recipe--div__TEXT {
+        max-height: 22vw;   
+        display: flex;
+        flex-direction: column;
+        gap: 1.8vw;
+        overflow-y: auto;
+    }
+    .recipe--div__TEXT::-webkit-scrollbar {
+        width: 0.3vw;
+        background-color: hsl(0, 0%, 98%);
+    }
+    .recipe--div__TEXT::-webkit-scrollbar-thumb {
+        border-radius: 0.3vw;
+	    background-color: hsl(0, 0%, 33%);
+    }
+    .recipe--div__TEXT::-webkit-scrollbar-track {
+        border-radius: 0.3vw;
+	    background-color: hsl(0, 0%, 87%);
+    }
+
+    .recipe--p {
+        padding-right: 1vw;
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.7vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .recipe--h3 {
+        font-family: "PlayfairDisplay";
+        font-weight: 900;
+        font-size: 1.7vw;
+    }
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    .recipe--div__CONTENT {
+        gap: 1.5vw;
+    }
+    .recipe--h2 {
+        font-size: 2.2vw;
+    }
+    .recipe--div__INFO_AND_BUTTON {
+        padding-right: 2.2vw;
+    }
+    .recipe--i {
+        top: -0.05vw;
+        font-size: 0.9vw;
+    }
+    .recipe--span:first-of-type {
+        font-size: 1.1vw;
+    }
+    .recipe--img__GRAPH {
+        top: 0.1vw;
+        width: 6%;
+    }
+    .recipe--span:last-of-type {
+        font-size: 1.2vw;
+    }
+    .recipe--a__SAVE {
+        padding: 0.5vw 0.9vw 0.3vw;
+        font-size: 0.9vw;
+    }
+    .recipe--div__TEXT {
+        max-height: 18vw;
+        gap: 1.5vw;
+    }
+    .recipe--p {
+        padding-right: 1.1vw;
+        font-size: 1.3vw;
+    }
+    .recipe--h3 {
+        font-size: 1.3vw;
+    }
+}
+
+
+
+
+
+
+
+/* ********** ----------   СЕКЦИЯ SORRY&AUTHOR   ---------- **********  */
+
+
+.sa {
+    display: none;
+}
+
+
+
+
+
+@media (min-width: 740px) {
+    .sa {
+        margin-top: 5vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sa1, .sa2 {
+        padding: 1.5vw 2vw 2vw;
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+
+    .sa1 {
+        background: url(images/plate.png) center / cover no-repeat;
+    }
+
+    .sa1--h3__404 {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 2.2vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .sa1--div__LINE1 {
+        height: 0.2vw;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+
+    .sa1--div__TEXT {
+        margin: 14.5vw 0 10vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sa1--p__1 {
+        margin-bottom: 0.6vw;
+        font-family: "JosefinSans";
+        font-weight: bold;
+        font-size: 3.3vw;
+        line-height: 1.2;
+        text-indent: 1.5vw;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .sa1--p__2 {
+        font-family: "PlayfairDisplay";
+        font-weight: 900;
+        font-size: 1.7vw;
+        line-height: 1.2;
+        text-indent: 1.5vw;
+        color: hsl(0, 0%, 66%);
+    }
+
+    .sa1--img__SMILE {
+        margin: 1.5vw 0 0 1.5vw;
+        width: 8%;
+    }
+
+    .sa1--button {
+        margin-left: 1vw;
+        padding: 0.6vw 3.5vw 0.4vw;
+        align-self: center;
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.1vw;
+        line-height: 1.2;
+        text-align: center;
+        color: hsl(0, 0%, 0%);
+        background-color: transparent;
+        border: 0.1vw solid hsl(0, 0%, 65%);
+        cursor: pointer;
+    }
+    @media (any-hover: hover) {
+        .sa1--button:hover {
+            color: hsl(0, 0%, 35%);
+            border-color: hsl(0, 0%, 77%);
+        }
+    }
+    .sa1--button:active {
+        color: hsl(0, 0%, 15%);
+        border-color: hsl(0, 0%, 70%);
+    }
+    @media (any-hover: none) {
+        .sa1--button:active {
+            color: hsl(0, 0%, 45%);
+            border-color: hsl(0, 0%, 80%);
+        }
+    }
+
+    .sa2--h3__AUTHOR {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 2.2vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .sa2--div__LINE1 {
+        height: 0.2vw;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+
+    .sa2--div__CONTENT {
+        margin-top: 2vw;
+        display: flex;
+        align-items: flex-start;
+        gap: 2vw;
+    }
+
+    .sa2--img__AUTHOR {
+        width: 12vw;
+        border-radius: 50%;
+    }
+
+    .sa2--div__INFORMATION {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vw;
+    }
+
+    .sa2--h2__NAME {
+        margin-bottom: -0.4vw;
+        font-family: "JosefinSans";
+        font-weight: 700;
+        font-size: 2.4vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .sa2--p__COUNTRY {
+        margin-bottom: 0.1vw;
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.6vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .sa2--div__SOCIAL_NETW {
+        display: flex;
+        align-items: flex-end;
+        gap: 1.5vw;
+    }
+
+    .sa2--i {
+        opacity: 0.5;
+        font-size: 1.6vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+    @media (any-hover:hover) {
+        .sa2--i:hover {
+            color: hsl(0, 0%, 52%);
+        }
+    }
+    .sa2--i:active {
+        color: hsl(0, 0%, 40%);
+    }
+    @media (any-hover: none) {
+        .sa2--i:active {
+            color: hsl(0, 0%, 70%);
+        }
+    }
+
+    .sa2--div__LINE2 {
+        margin: 1vw 0;
+        height: 0.2vw;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+
+    .sa2--h3__ABOUT {
+        margin-bottom: 0.5vw;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 2vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .sa2--p__TEXT {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.5vw;
+        line-height: 1.2; 
+        font-style: italic;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .sa2--img__SIGNATURE {
+        width: 50%;
+        align-self: flex-end;
+    }
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    .sa1, .sa2 {
+        width: 47%;
+    }
+    .sa1--h3__404 {
+        font-size: 1.8vw;
+    }
+    .sa1--div__LINE1 {
+        height: 0.1vw;
+    }
+    .sa1--div__TEXT {
+        margin: 10vw 0 6.5vw;
+    }
+    .sa1--p__1 {
+        margin-bottom: 0.4vw;
+        font-size: 2.8vw;
+        text-indent: 1.4vw;
+    }
+    .sa1--p__2 {
+        font-size: 1.2vw;
+        text-indent: 1.4vw;
+    }
+    .sa1--img__SMILE {
+        margin: 1.5vw 0 0 1.4vw;
+        width: 7%;
+    }
+    .sa1--button {
+        margin-left: 1.4vw;
+        padding: 0.5vw 2.7vw 0.3vw;
+        font-size: 0.9vw;
+    }
+    .sa2--h3__AUTHOR {
+        font-size: 1.8vw;
+    }
+    .sa2--div__LINE1 {
+        height: 0.1vw;
+    }
+    .sa2--img__AUTHOR {
+        width: 11.6vw;
+    }
+    .sa2--h2__NAME {
+        font-size: 2vw;
+    }
+    .sa2--p__COUNTRY {
+        margin-bottom: -0.1vw;
+        font-size: 1.2vw;
+    }
+    .sa2--div__SOCIAL_NETW {
+        gap: 1.1vw;
+    }
+    .sa2--i {
+        font-size: 1.2vw;
+    }
+    .sa2--div__LINE2 {
+        margin: 0.6vw 0;
+        height: 0.1vw;
+    }
+    .sa2--h3__ABOUT {
+        font-size: 1.6vw;
+    }
+    .sa2--p__TEXT {
+        font-size: 1.1vw;
+    }
+    .sa2--img__SIGNATURE {
+        margin-top: 1vw;
+    }
+}
+
+
+
+
+
+
+
+/* ********** ----------   СЕКЦИЯ MISCELLANEA   ---------- **********  */
+
+
+.misc {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.misc1 {
+    display: none;
+}
+
+
+.misc2 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.misc21 {
+    padding: 10vw;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.misc21--div__HEAD {
+    display: none;
+}
+
+
+.misc21--div__TABS {
+    display: flex;
+    flex-direction: column;
+    gap: 10vw;
+}
+
+
+.misc21--div__TAB_BUTTONS {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.misc21--button__TAB_BUTTON {
+    padding: 1.5vw;
+    font-family: "JosefinSans";
+    font-weight: 300;
+    font-size: 4.5vw;
+    line-height: 1.2;
+    color: hsl(0, 0%, 0%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.misc21--button__TAB_BUTTON:first-child {
+    font-weight: 700;
+}
+
+
+.misc21--div__CONTENT {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.misc21--div__BLOCK {
+    display: none;
+    flex-direction: column;
+    gap: 10vw;
+}
+.misc21--div__BLOCK:first-child {
+    display: flex;
+}
+
+
+.misc21--a__DISH {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-decoration: none;
+}
+.misc21--a__DISH:active .misc21--img__DISH_IMAGE {
+    filter: brightness(108%);
+}
+.misc21--a__DISH:active .misc21--p,
+.misc21--a__DISH:active .misc21--span {
+    color: hsl(0, 0%, 50%);
+}
+
+
+.misc21--img__DISH_IMAGE {
+    width: 18vw;
+}
+
+
+.misc21--div__DISH_TEXT {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.misc21--p:first-of-type {
+    font-family: "JosefinSans";
+    font-weight: 700;
+    font-size: 4vw;
+    line-height: 1.2;
+    color: hsl(0, 0%, 0%);
+}
+
+
+.misc21--p:last-of-type {
+    font-family: "JosefinSans";
+    font-weight: 600;
+    font-size: 5vw;
+    line-height: 1.2;
+    color: hsl(0, 0%, 0%);
+}
+
+
+.misc21--span {
+    font-family: "JosefinSans";
+    font-weight: 300;
+    font-size: 4vw;
+    line-height: 1.2;
+    color: hsl(0, 0%, 0%);
+}
+
+
+.misc21--div__FOOT {
+    margin-top: 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.misc21--div__SOCIAL_NETW_FOOT {
+    display: flex;
+    gap: 4.5vw;
+}
+
+
+.misc21--i {
+    color: hsl(0, 0%, 33%);
+    font-size: 5vw;
+}
+.misc21--i:active {
+    color: hsl(0, 0%, 70%);
+}
+
+
+.misc21--a__VIEW {
+    padding: 1.9vw 4vw 1.2vw;
+    align-self: center;
+    font-family: "JosefinSans";
+    font-weight: 300;
+    font-size: 4vw;
+    line-height: 1.2;
+    text-align: center;
+    color: hsl(0, 0%, 0%);
+    background-color: transparent;
+    text-decoration: none;
+    border: 0.1vw solid hsl(0, 0%, 65%);
+    cursor: pointer;
+}
+.misc21--a__VIEW:active {
+    color: hsl(0, 0%, 45%);
+    border-color: hsl(0, 0%, 80%);
+}
+
+
+.zero--div__MOB_BORDER {
+    width: 100vw;
+    height: 1vw;
+    background-color: hsl(0, 0%, 33%);
+    opacity: 0.2;
+}
+
+
+.misc22 {
+    display: none;
+}
+
+
+.misc23 {
+    display: none;
+}
+
+
+.misc31 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.misc31--div__PADD {
+    height: 10vw;
+    background-color: hsl(210, 33%, 99%);
+}
+
+
+.misc31--div__MAIN {
+    padding: 5vw 10vw 10vw;
+    display: flex;
+    flex-direction: column;
+    background: url(images/popular.png) center / cover no-repeat;
+}
+
+
+.misc31--h2 {
+    margin-bottom: 4vw;
+    font-family: "PlayfairDisplay";
+    font-weight: 900;
+    font-size: 10vw;
+    line-height: 1.2;
+    color: hsl(350, 80%, 32%);
+}
+
+
+.misc31--div__LINE4 {
+    margin-bottom: 7vw;
+    width: 100%;
+    height: 1vw;
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+.misc31--h3 {
+    margin-bottom: 6vw;
+    font-family: "JosefinSans";
+    font-weight: 700;
+    font-size: 6vw;
+    line-height: 1.2;
+    color: hsl(0, 0%, 0%);
+}
+
+
+.misc31--p {
+    margin-bottom: 6vw;
+    font-family: "JosefinSans";
+    font-weight: 400;
+    font-style: oblique;
+    font-size: 4.5vw;
+    line-height: 1.2;
+    color: hsl(0, 0%, 13%);
+}
+
+
+.misc31--div__CONT {
+    margin-bottom: 35vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.misc31--a {
+    padding: 1.9vw 3vw 1.2vw;
+    align-self: center;
+    font-family: "JosefinSans";
+    font-weight: 300;
+    font-size: 4vw;
+    line-height: 1.2;
+    text-align: center;
+    color: hsl(0, 0%, 0%);
+    background-color: transparent;
+    text-decoration: none;
+    border: 0.1vw solid hsl(0, 0%, 65%);
+    cursor: pointer;
+}
+.misc31--a:active {
+    color: hsl(0, 0%, 45%);
+    border-color: hsl(0, 0%, 80%);
+}
+
+
+.misc31--span {
+    font-family: "OpenSans";
+    font-weight: 300;
+    font-size:3.5vw;
+    line-height: 1.2;
+    color: hsl(0, 0%, 33%);
+}
+
+
+.misc31--i {
+    font-size: 3.5vw;
+    line-height: 1.2;
+    color: hsl(0, 0%, 33%);
+}
+
+
+.misc32 {
+    display: none;
+}
+
+
+
+
+
+@media (min-width: 740px) {
+    .misc {
+        margin-top: 5vw;
+        padding: 0 1.5vw;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .misc1,
+    .misc2,
+    .misc3 {
+        width: 31%;
+        display: flex;
+        flex-direction: column;
+        gap: 4vw;
+    }
+
+    .misc11 {
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+
+    .misc11--div__MAIN {
+        padding: 2vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .misc11--h3__CHICHI {
+        font-family: "PlayfairDisplay";
+        font-weight: 900;
+        font-size: 2vw;
+        line-height: 1.2;
+        color: hsl(180, 89%, 18%);
+        text-align: center;
+    }
+
+    .misc11--div__LINE3 {
+        margin: 0.5vw 0 1vw;
+        height: 0.1vw;
+        width: 100%;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+
+    .misc11--div__INFO {
+        display: flex;
+        align-items: flex-end;
+        gap: 2vw;
+    }
+
+    .misc11--img__AVA2 {
+        width: 25%;
+    }
+
+    .misc11--p__FIRST,
+    .misc11--p__SECOND {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.3vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+    .misc11--p__SECOND {
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .misc11--i {
+        margin-right: -0.3vw;
+        font-size: 1.1vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+
+    .misc11--span {
+        margin-right: -0.3vw;
+        font-family: "OpenSans";
+        font-weight: 300;
+        font-size: 1.2vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+
+    .misc11--div__SWIPER {
+        margin: 0;
+        min-width: 0;
+        display: block;
+    }
+
+    .misc11--div__SWIPER_WRAPPER {
+        box-sizing: border-box;
+    }
+
+    .misc11--div__SWIPER_SLIDE {
+        margin: 0;
+    }
+
+    .misc11--img__CHICHI {
+        margin-bottom: -0.6vw;
+        width: 100%;
+    }
+
+    .misc11--div__SWIPER .swiper-pagination-bullets {
+        bottom: 0.7vw;
+    }
+
+    .misc11--div__SWIPER .swiper-pagination-bullet {
+        opacity: 1;
+        background-color: hsl(0, 0%, 100%);
+    }
+
+    .misc11--div__SWIPER .swiper-pagination-bullet-active {
+        background-color: hsl(0, 0%, 33%);
+    }
+
+    .misc12 {
+        padding: 2vw;
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+
+    .misc12--div__HEAD {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .misc12--span__HEAD_NAME {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.8vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .misc12--div__SOCIAL_NETW {
+        display: flex;
+        gap: 1vw;
+    }
+
+    .misc12--i {
+        font-size: 1.3vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+    @media (any-hover: hover) {
+        .misc12--i:hover {
+            color: hsl(0, 0%, 52%);
+        }
+    }
+    .misc12--i:active {
+        color: hsl(0, 0%, 40%);
+    }
+    @media (any-hover: none) {
+        .misc12--i:active {
+            color: hsl(0, 0%, 70%);
+        }
+    }
+
+    .misc12--div__LINE3 {
+        margin: 0.5vw 0 1vw;
+        height: 0.1vw;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+
+    .misc12--h3 {
+        padding-left: 1vw;
+        font-family: "PlayfairDisplay";
+        font-weight: 900;
+        font-size: 2vw;
+        line-height: 1.2;
+        color: hsl(180, 89%, 18%);
+    }
+
+    .misc12--div__CHARTS {
+        margin-top: 2vw;
+        padding: 0 0 1vw 1vw;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 2vw;
+    }
+
+    .misc12--div__TEXT {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3vw;
+    }
+
+    .misc12--h4 {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.7vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+
+    .misc12--p {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1.4vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        opacity: 0.7;
+    }
+
+    /*--- SVG начало ---*/
+    .misc12--svg {
+        width: 7vw;
+        height: 7vw;
+    }
+    .misc12--text__SVG_TEXT {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 3.2vw;
+        line-height: 1.2;
+        fill: hsl(0, 0%, 58%);
+    }
+    /*--- SVG конец ---*/
+
+    .misc21 {
+        padding: 2vw;
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+
+    .misc21--div__HEAD {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .misc21--span__HEAD_NAME {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.8vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .misc21--div__SOCIAL_NETW {
+        display: flex;
+        gap: 1vw;
+    }
+
+    .misc21--i {
+        font-size: 1.3vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+    @media (any-hover: hover) {
+        .misc21--i:hover {
+            color: hsl(0, 0%, 52%);
+        }
+    }
+    .misc21--i:active {
+        color: hsl(0, 0%, 40%);
+    }
+    @media (any-hover: none) {
+        .misc21--i:active {
+            color: hsl(0, 0%, 70%);
+        }
+    }
+
+    .misc21--div__LINE3 {
+        margin: 0.5vw 0 1vw;
+        height: 0.1vw;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+
+    .misc21--div__TABS {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vw;
+    }
+
+    .misc21--div__TAB_BUTTONS {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .misc21--button__TAB_BUTTON {
+        padding: 0.5vw;
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.2vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .misc21--div__BLOCK {
+        display: none;
+        flex-direction: column;
+        gap: 2.5vw;
+    }
+
+    @media (any-hover: hover) {
+        .misc21--a__DISH:hover {
+            text-decoration: underline hsl(0, 0%, 40%) 0.1vw;
+        }
+        .misc21--a__DISH:hover .misc21--img__DISH_IMAGE {
+            filter: brightness(108%);
+        }
+        .misc21--a__DISH:hover .misc21--p,
+        .misc21--a__DISH:hover .misc21--span {
+            color: hsl(0, 0%, 40%);
+        }
+    }
+    .misc21--a__DISH:active {
+        text-decoration-color: hsl(0, 0%, 20%);
+    }
+    .misc21--a__DISH:active .misc21--img__DISH_IMAGE {
+        filter: brightness(104%);
+    }
+    .misc21--a__DISH:active .misc21--span,
+    .misc21--a__DISH:active .misc21--p {
+        color: hsl(0, 0%, 20%);
+    }
+    @media (any-hover: none) {
+        .misc21--a__DISH:active .misc21--img__DISH_IMAGE {
+            filter: brightness(108%);
+        }
+        .misc21--a__DISH:active .misc21--span,
+        .misc21--a__DISH:active .misc21--p {
+            color: hsl(0, 0%, 50%);
+        }
+    }
+
+    .misc21--img__DISH_IMAGE {
+        margin-top: 0.25vw;
+        width: 22%;
+    }
+
+    .misc21--p:first-of-type {
+        font-family: "JosefinSans";
+        font-weight: 700;
+        font-size: 1.2vw;
+        line-height: 1.5;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .misc21--p:last-of-type {
+        font-family: "JosefinSans";
+        font-weight: 600;
+        font-size: 1.4vw;
+        line-height: 1.1;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .misc21--span {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.2vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .misc21--div__FOOT {
+        margin-top: 1.5vw;
+        justify-content: flex-end;
+    }
+
+    .misc21--div__SOCIAL_NETW_FOOT {
+        display: none;
+    }
+
+    .misc21--a__VIEW {
+        padding: 0.6vw 1vw 0.4vw;
+        font-size: 1.1vw;
+    }
+    @media (any-hover: hover) {
+        .misc21--a__VIEW:hover {
+            color: hsl(0, 0%, 35%);
+            border-color: hsl(0, 0%, 77%);
+        }
+    }
+    .misc21--a__VIEW:active {
+        color: hsl(0, 0%, 15%);
+        border-color: hsl(0, 0%, 70%);
+    }
+    @media (any-hover: none) {
+        .misc21--a__VIEW:active {
+            color: hsl(0, 0%, 45%);
+            border-color: hsl(0, 0%, 80%);
+        }
+    }
+
+    .zero--div__MOB_BORDER {
+        display: none;
+    }
+
+    .misc22 {
+        padding: 2vw;
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+
+    .misc22--div__HEAD {
+        display: flex;
+        align-items: center;
+    }
+
+    .misc22--span__HEAD_NAME {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.8vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .misc22--div__LINE3 {
+        margin: 0.5vw 0 1vw;
+        height: 0.1vw;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+    
+    .misc22--p__HASHTAGS {
+        text-align: justify;
+    }
+
+    .misc22--a {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.15vw;
+        line-height: 2;
+        color: hsl(0, 0%, 0%);
+        text-decoration: none;
+    }
+    @media (any-hover: hover) {
+        .misc22--a:hover {
+            color: hsl(0, 0%, 30%);
+            text-decoration: underline hsl(0, 0%, 65%);
+        }
+    }
+    .misc22--a:active {
+        color: hsl(0, 0%, 15%);
+        text-decoration-color: hsl(0, 0%, 40%);
+    }
+    @media (any-hover: none) {
+        .misc22--a:active {
+            color: hsl(0, 0%, 45%);
+        }
+    }
+
+    .misc23 {
+        padding: 2vw;
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+
+    .misc23--div__HEAD {
+        display: flex;
+        align-items: center;
+    }
+
+    .misc23--span__HEAD_NAME {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.8vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%)
+    }
+
+    .misc23--div__LINE3 {
+        margin: 0.5vw 0 1vw;
+        height: 0.1vw;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+
+    .misc23--div__CALENDAR {
+        padding-top: 1vw;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    .misc23--div__SWITCH {
+        padding: 0 3.5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .misc23--i__LEFT,
+    .misc23--i__RIGHT {
+        font-size: 1.4vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+        cursor: pointer;
+    }
+
+    .misc23--div__M_AND_Y {
+        padding-top: 0.2vw;
+    }
+
+    .misc23--span__MONTH,
+    .misc23--span__YEAR {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.7vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .misc23--table {
+        border-collapse: collapse;
+    }
+
+    .misc23--tr__0 {
+        height: 3vw;
+    }
+
+    .misc23--th {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-size: 1.4vw;
+        line-height: 1.2;
+        text-decoration: underline;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .misc23--tr {
+        height: 3vw;
+    }
+
+    .misc23--td {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-size: 1.4vw;
+        line-height: 2;
+        color: hsl(0, 0%, 0%);
+        text-align: center;
+    }
+
+    .misc23--tdx {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-size: 1.4vw;
+        line-height: 2;
+        color: hsl(0, 0%, 62%);
+        text-align: center;
+    }
+
+    .misc31 {
+        padding: 2vw;
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+        background: url(images/popular.png) center / cover no-repeat;
+    }
+
+    .misc31--div__PADD {
+        display: none;
+    }
+    
+    .misc31--div__MAIN {
+        padding: 0;
+        background: transparent;
+    }
+
+    .misc31--h2 {
+        margin-bottom: 1.5vw;
+        font-size: 3vw;
+    }
+
+    .misc31--div__LINE4 {
+        margin-bottom: 2vw;
+        height: 0.2vw;
+    }
+
+    .misc31--h3 {
+        margin-bottom: 1vw;
+        font-size: 1.8vw;
+    }
+
+    .misc31--p {
+        margin-bottom: 2vw;
+        font-size: 1.5vw;
+    }
+
+    .misc31--div__CONT {
+        margin-bottom: 7.5vw;
+    }
+
+    @-moz-document url-prefix() {
+        .misc31--div__CONT {
+            margin-bottom: 7.9vw;
+        }
+    }
+
+    .misc31--a {
+        padding: 0.8vw 0.3vw 0.4vw;
+        font-size: 1.2vw;
+    }
+    @media (any-hover: hover) {
+        .misc31--a:hover {
+            color: hsl(0, 0%, 35%);
+            border-color: hsl(0, 0%, 77%);
+        }
+    }
+    .misc31--a:active {
+        color: hsl(0, 0%, 15%);
+        border-color: hsl(0, 0%, 70%);
+    }
+    @media (any-hover: none) {
+        .misc31--a:active {
+            color: hsl(0, 0%, 45%);
+            border-color: hsl(0, 0%, 80%);
+        }
+    }
+
+    .misc31--span {
+        margin-right: -0.2vw;
+        font-family: "OpenSans";
+        font-weight: 300;
+        font-size: 1.2vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+    .misc31--span:last-of-type {
+        margin-right: 0;
+    }
+
+    .misc31--i {
+        margin-right: -0.2vw;
+        font-size: 1vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+
+    .misc32 {
+        padding: 2vw;
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+    
+    .misc32--div__HEAD {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .misc32--span__HEAD_NAME {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.8vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .misc32--div__SOCIAL_NETW {
+        display: flex;
+        gap: 1vw;
+    }
+
+    .misc32--i {
+        font-size: 1.3vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+    @media (any-hover: hover) {
+        .misc32--i:hover {
+            color: hsl(0, 0%, 52%);
+        }
+    }
+    .misc32--i:active {
+        color: hsl(0, 0%, 40%);
+    }
+    @media (any-hover: none) {
+        .misc32--i:active {
+            color: hsl(0, 0%, 70%);
+        }
+    }
+
+    .misc32--div__LINE3 {
+        margin: 0.5vw 0 1vw;
+        height: 0.1vw;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+
+    .misc32--h2 {
+        padding: 0.5vw 0 0 1vw;
+        font-family: "PlayfairDisplay";
+        font-weight: 900;
+        font-size: 2vw;
+        line-height: 1.2;
+        color: hsl(180, 89%, 18%);
+    }
+
+    .misc32--div__CONT {
+        padding: 0 1vw 2vw 2.5vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .misc32--div__GIST {
+        padding: 1vw 0 1vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .misc32--div__BLOCK {
+        display: flex;
+    }
+
+    .misc32--p__TITLE {
+        opacity: 0.8;
+        writing-mode: vertical-rl;
+	    transform: scale(-1);
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.8vw;
+        line-height: 0.8;
+        color: hsl(0, 0%, 33%);
+    }
+    
+    .misc32--div__column {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 0.7vw;
+    }
+
+    .misc32--p__TIME {
+        writing-mode: vertical-rl;
+	    transform: scale(-1);
+        font-family: "OpenSans";
+        font-weight: 300;
+        font-size: 1.5vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+
+    .misc32--div__SCALE1 {
+        height: 6.8vw;
+        width: 1vw;
+        background-color: hsl(171, 44%, 67%);
+    }
+
+    .misc32--div__SCALE2 {
+        height: 9.9vw;
+        width: 1vw;
+        background-color: hsl(180, 75%, 20%);
+    }
+
+    .misc32--div__SCALE3 {
+        height: 13.1vw;
+        width: 1vw;
+        background-color: hsl(333, 100%, 35%);
+    }
+
+    .misc32--p__FOOT {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.6vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 42%);
+    }
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    .misc {
+        padding: 0 3vw;
+    }
+    .misc1,
+    .misc2,
+    .misc3 {
+        width: 28%;
+        gap: 4vw;
+    }
+    .misc11--div__MAIN {
+        padding: 2vw 1.5vw 1.5vw;
+    }
+    .misc11--h3__CHICHI {
+        font-size: 1.7vw;
+    }
+    .misc11--div__LINE3 {
+        margin: 0.8vw 0 1vw;
+    }
+    .misc11--div__INFO {
+        display: flex;
+        align-items: center;
+        gap: 1.5vw;
+    }
+    .misc11--img__AVA2 {
+        width: 23%;
+    }
+    .misc11--p__FIRST,
+    .misc11--p__SECOND {
+        font-size: 1.1vw;
+    }
+    .misc11--i {
+        margin-right: -0.1vw;
+        font-size: 0.9vw;
+    }
+    .misc11--span {
+        margin-right: -0.1vw;
+        font-size: 0.9vw;
+    }
+    .misc12 {
+        padding: 2vw 1.5vw 1.5vw;
+    }
+    .misc12--span__HEAD_NAME {
+        font-size: 1.5vw;
+    }
+    .misc12--div__SOCIAL_NETW {
+        gap: 0.8vw;
+    }
+    .misc12--i {
+        font-size: 1.1vw;
+    }
+    .misc12--h3 {
+        padding-left: 1vw;
+        font-size: 1.6vw;
+    }
+    .misc12--div__CHARTS {
+        margin-top: 2vw;
+        padding: 0 0 1vw 1vw;
+        grid-gap: 1.7vw;
+    }
+    .misc12--div__TEXT {
+        gap: 0.3vw;
+    }
+    .misc12--h4 {
+        font-size: 1.5vw;
+    }
+    .misc12--p {
+        font-size: 1.2vw;
+    }
+    /*--- SVG начало ---*/
+    .misc12--svg {
+        width: 5.5vw;
+        height: 5.5vw;
+    }
+    .misc12--text__SVG_TEXT {
+        font-size: 2.5vw;
+    }
+    /*--- SVG конец ---*/
+    .misc21 {
+        padding: 2vw 1.5vw 1.5vw;
+    }
+    .misc21--span__HEAD_NAME {
+        font-size: 1.5vw;
+    }
+    .misc21--div__SOCIAL_NETW {
+        gap: 0.8vw;
+    }
+    .misc21--i {
+        font-size: 1.1vw;
+    }
+    .misc21--div__TABS {
+        gap: 1.2vw;
+    }
+    .misc21--button__TAB_BUTTON {
+        padding: 0.5vw;
+        font-size: 1vw;
+    }
+    .misc21--div__BLOCK {
+        gap: 2vw;
+    }
+    .misc21--img__DISH_IMAGE {
+        margin-top: 0.25vw;
+        width: 22%;
+    }
+    .misc21--p:first-of-type {
+        font-size: 0.9vw;
+    }
+    .misc21--p:last-of-type {
+        font-size: 1.1vw;
+    }
+    .misc21--span {
+        font-size: 1vw;
+    }
+    .misc21--div__FOOT {
+        margin-top: 1.5vw;
+    }
+    .misc21--a__VIEW {
+        padding: 0.5vw 1vw 0.3vw;
+        font-size: 0.9vw;
+    }
+    .misc22 {
+        padding: 2vw 1.5vw 1.5vw;
+    }
+    .misc22--span__HEAD_NAME {
+        font-size: 1.5vw;
+    }
+    .misc22--a {
+        font-size: 0.9vw;
+    }
+    .misc23 {
+        padding: 2vw 1.5vw 1.5vw;
+    }
+    .misc23--span__HEAD_NAME {
+        font-size: 1.5vw;
+    }
+    .misc23--div__CALENDAR {
+        padding-top: 1vw;
+        gap: 1.5vw;
+    }
+    .misc23--div__SWITCH {
+        padding: 0 3.5%;
+    }
+    .misc23--i__LEFT,
+    .misc23--i__RIGHT {
+        font-size: 1.2vw;
+    }
+    .misc23--div__M_AND_Y {
+        padding-top: 0.25vw;
+    }
+    .misc23--span__MONTH,
+    .misc23--span__YEAR {
+        font-size: 1.4vw;
+    }
+    .misc23--tr__0 {
+        height: 2.7vw;
+    }
+    .misc23--th {
+        font-size: 1.2vw;
+    }
+    .misc23--tr {
+        height: 2.7vw;
+    }
+    .misc23--td {
+        font-size: 1.2vw;
+        line-height: 1.8;
+    }
+    .misc23--tdx {
+        font-size: 1.2vw;
+        line-height: 1.8;
+    }
+    .misc31 {
+        padding: 2vw 1.5vw 1.5vw;
+    }
+    .misc31--h2 {
+        margin-bottom: 1vw;
+        font-size: 2.3vw;
+    }
+    .misc31--div__LINE4 {
+        margin-bottom: 1.5vw;
+        height: 0.1vw;
+    }
+    .misc31--h3 {
+        margin-bottom: 0.7vw;
+        font-size: 1.4vw;
+    }
+    .misc31--p {
+        margin-bottom: 1.3vw;
+        font-size: 1.2vw;
+    }
+    .misc31--div__CONT {
+        margin-bottom: 6.9vw;
+    }
+    .misc31--a {
+        padding: 0.5vw 0.3vw 0.3vw;
+        font-size: 0.9vw;
+    }
+    .misc31--span {
+        margin-right: -0.1vw;
+        font-size: 0.9vw;
+    }
+    .misc31--i {
+        margin-right: -0.1;
+        font-size: 0.9vw;
+    }
+    .misc32 {
+        padding: 2vw 1.5vw 1.5vw;
+    }
+    .misc32--span__HEAD_NAME {
+        font-size: 1.5vw;
+    }
+    .misc32--div__SOCIAL_NETW {
+        gap: 1vw;
+    }
+    .misc32--i {
+        font-size: 1.1vw;
+    }
+    .misc32--div__LINE3 {
+        margin: 0.5vw 0 0.8vw;
+    }
+    .misc32--h2 {
+        padding: 0.5vw 0 0 1vw;
+        font-size: 1.7vw;
+    }
+    .misc32--div__CONT {
+        padding: 0 0.7vw 2vw 2.3vw;
+    }
+    .misc32--div__GIST {
+        padding: 0.7vw 0 1vw;
+    }
+    .misc32--p__TITLE {
+        font-size: 1.4vw;
+        line-height: 0.8;
+    }
+    .misc32--div__column {
+        gap: 0.7vw;
+    }
+    .misc32--p__TIME {
+        font-size: 1.2vw;
+    }
+    .misc32--div__SCALE1 {
+        height: 6vw;
+        width: 0.8vw;
+    }
+    .misc32--div__SCALE2 {
+        height: 9.1vw;
+        width: 0.8vw;
+    }
+    .misc32--div__SCALE3 {
+        height: 12.3vw;
+        width: 0.8vw;
+    }
+    .misc32--p__FOOT {
+        font-size: 1.2vw;
+    }
+}
+
+
+
+
+
+@media (min-width: 1300px) {
+    .misc31--div__CONT {
+        margin-bottom: 6.7vw;
+    }
+    @-moz-document url-prefix() {
+        .misc31--div__CONT {
+            margin-bottom: 6.9vw;
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+/* ********** ----------   СЕКЦИЯ FORM   ---------- **********  */
+
+
+.form {
+    display: none;
+}
+
+
+
+
+
+@media (min-width: 740px) {
+    .form {
+        margin-top: 5vw;
+        padding: 0 12vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .form1,
+    .form2 {
+        padding: 2vw;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+
+    .form1--div__HEAD {
+        display: flex;
+        align-items: center;
+    }
+
+    .form1--span__HEAD_NAME {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.8vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .form1--div__LINE3 {
+        margin: 0.5vw 0 1vw;
+        height: 0.1vw;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+
+    .form1--form {
+        margin-top: 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form1--h3 {
+        align-self: flex-start;
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.5vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .form1--input__EMAIL {
+        margin-top: 1.5vw;
+        padding: 0.9vw;
+        width: 100%;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-size: 1.6vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        border: 0.1vw solid hsl(0, 0%, 76%);
+        outline: none;
+    }
+    .form1--input__EMAIL:focus {
+        box-shadow: inset 0.1vw 0.2vw 0.7vw 0vw hsl(180, 1%, 66%);
+    }
+    .form1--input__EMAIL::placeholder {
+        opacity: 0.2;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.5vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .form1--input__PASSWORD {
+        margin-top: 1.5vw;
+        padding: 0.9vw;
+        width: 100%;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-size: 1.6vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        border: 0.1vw solid hsl(0, 0%, 76%);
+        outline: none;
+    }
+    .form1--input__PASSWORD:focus {
+        box-shadow: inset 0.1vw 0.2vw 0.7vw 0vw hsl(180, 1%, 66%);
+    }
+    .form1--input__PASSWORD::placeholder {
+        opacity: 0.2;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.5vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .form1--div__MEMORY {
+        margin-top: 1.5vw;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .form1--label {
+        display: flex;
+        gap: 0.3vw;
+        opacity: 0.54;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-size: 1.3vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        cursor: pointer;
+    }
+
+    .form1--input__CHECKBOX {
+        cursor: pointer;
+    }
+
+    .form1--i__REMEMBER {
+        padding-top: 0.2vw;
+        font-style: oblique;
+    }
+
+    .form1--a__FORGOT {
+        padding-top: 0.1vw;
+        opacity: 0.54;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.3vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        text-decoration: none;
+    }
+    @media (any-hover:hover) {
+        .form1--a__FORGOT:hover {
+            color: hsl(0, 0%, 35%);
+            text-decoration: underline hsl(0, 0%, 45%);
+        }
+    }
+    .form1--a__FORGOT:active {
+        color: hsl(0, 0%, 15%);
+    }
+    @media (any-hover: none) {
+        .form1--a__FORGOT:active {
+            color: hsl(0, 0%, 35%);
+        }
+    }
+
+    .form1--button {
+        margin-top: 2.5vw;
+        padding: 0.6vw 2.5vw 0.4vw;
+        align-self: center;
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.2vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        background-color: transparent;
+        border: 0.1vw solid hsl(0, 0%, 65%);
+        cursor: pointer;
+    }
+    @media (any-hover: hover) {
+        .form1--button:hover {
+            color: hsl(0, 0%, 35%);
+            border-color: hsl(0, 0%, 77%);
+        }
+    }
+    .form1--button:active {
+        color: hsl(0, 0%, 15%);
+        border-color: hsl(0, 0%, 70%);
+    }
+    @media (any-hover: none) {
+        .form1--button:active {
+            color: hsl(0, 0%, 45%);
+            border-color: hsl(0, 0%, 80%);
+        }
+    }
+
+    .form1--div__LINKS {
+        margin-top: 2vw;
+        align-self: center;
+        display: flex;
+        gap: 2vw;
+    }
+
+    .form1--i {
+        font-size: 2.2vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+    @media (any-hover:hover) {
+        .form1--i:hover {
+            color: hsl(0, 0%, 52%);
+        }
+    }
+    .form1--i:active {
+        color: hsl(0, 0%, 40%);
+    }
+    @media (any-hover: none) {
+        .form1--i:active {
+            color: hsl(0, 0%, 70%);
+        }
+    }
+
+    .form1--a__TO_SIGN {
+        margin-top: 2vw;
+        align-self: center;
+        opacity: 0.54;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.5vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        text-decoration: none;
+    }
+    @media (any-hover:hover) {
+        .form1--a__TO_SIGN:hover {
+            color: hsl(0, 0%, 35%);
+            text-decoration: underline;
+        }
+    }
+    .form1--a__TO_SIGN:active {
+        color: hsl(0, 0%, 15%);
+    }
+    @media (any-hover: none) {
+        .form1--a__TO_SIGN:active {
+            color: hsl(0, 0%, 35%);
+        }
+    }
+
+    .form2--div__HEAD {
+        display: flex;
+        align-items: center;
+    }
+
+    .form2--span__HEAD_NAME {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.8vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%)
+    }
+
+    .form2--div__LINE3 {
+        margin: 0.5vw 0 1vw;
+        height: 0.1vw;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+
+    .form2--form {
+        margin-top: 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form2--h3 {
+        align-self: flex-start;
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.5vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .form2--input__EMAIL {
+        margin-top: 1.5vw;
+        padding: 0.9vw;
+        width: 100%;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-size: 1.6vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        border: 0.1vw solid hsl(0, 0%, 76%);
+        outline: none;
+    }
+    .form2--input__EMAIL:focus {
+        box-shadow: inset 0.1vw 0.2vw 0.7vw 0vw hsl(180, 1%, 66%);
+    }
+    .form2--input__EMAIL::placeholder {
+        opacity: 0.2;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.5vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .form2--input__PASSWORD {
+        margin-top: 1.5vw;
+        padding: 0.9vw;
+        width: 100%;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-size: 1.6vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        border: 0.1vw solid hsl(0, 0%, 76%);
+        outline: none;
+    }
+    .form2--input__PASSWORD:focus {
+        box-shadow: inset 0.1vw 0.2vw 0.7vw 0vw hsl(180, 1%, 66%);
+    }
+    .form2--input__PASSWORD::placeholder {
+        opacity: 0.2;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.5vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .form2--button {
+        margin-top: 3vw;
+        padding: 0.8vw 2.5vw 0.4vw;
+        align-self: center;
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.2vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        background-color: transparent;
+        border: 0.1vw solid hsl(0, 0%, 65%);
+        cursor: pointer;
+    }
+    @media (any-hover: hover) {
+        .form2--button:hover {
+            color: hsl(0, 0%, 35%);
+            border-color: hsl(0, 0%, 77%);
+        }
+    }
+    .form2--button:active {
+        color: hsl(0, 0%, 15%);
+        border-color: hsl(0, 0%, 70%);
+    }
+    @media (any-hover: none) {
+        .form2--button:active {
+            color: hsl(0, 0%, 45%);
+            border-color: hsl(0, 0%, 80%);
+        }
+    }
+
+    .form2--div__LINKS {
+        margin-top: 2vw;
+        align-self: center;
+        display: flex;
+        gap: 2vw;
+    }
+
+    .form2--i {
+        font-size: 2.2vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+    @media (any-hover:hover) {
+        .form2--i:hover {
+            color: hsl(0, 0%, 52%);
+        }
+    }
+    .form2--i:active {
+        color: hsl(0, 0%, 40%);
+    }
+    @media (any-hover: none) {
+        .form2--i:active {
+            color: hsl(0, 0%, 70%);
+        }
+    }
+
+    .form2--p {
+        margin-top: 2.5vw;
+        opacity: 0.54;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-size: 1.4vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .form2--a__TERMS {
+        font-style: oblique;
+        color: hsl(227, 100%, 42%);
+    }
+    @media (any-hover: hover) {
+        .form2--a__TERMS:hover {
+            color: hsl(227, 100%, 62%);
+        }
+    }
+    .form2--a__TERMS:active {
+        color: hsl(227, 100%, 52%);
+    }
+    @media (any-hover: none) {
+        .form2--a__TERMS:active {
+            color: hsl(227, 100%, 62%);
+        }
+    }
+
+    .form2--a__TO_LOGIN {
+        margin-top: 1.5vw;
+        align-self: flex-start;
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.2vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        text-decoration: none;
+    }
+    @media (any-hover: hover) {
+        .form2--a__TO_LOGIN:hover {
+            color: hsl(0, 0%, 35%);
+            text-decoration: underline hsl(0, 0%, 60%);
+        }
+    }
+    .form2--a__TO_LOGIN:active {
+        color: hsl(0, 0%, 15%);
+        text-decoration-color: hsl(0, 0%, 45%);
+    }
+    .form2--a__TO_LOGIN:active {
+        color: hsl(0, 0%, 45%);
+    }
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    .form {
+        padding: 0 10vw;
+    }
+    .form1,
+    .form2 {
+        padding: 2vw;
+        width: 43%;
+    }
+    .form1--span__HEAD_NAME {
+        font-size: 1.5vw;
+    }
+    .form1--form {
+        margin-top: 1vw;
+    }
+    .form1--h3 {
+        font-size: 1.4vw;
+    }
+    .form1--input__EMAIL {
+        padding: 0.7vw;
+        font-size: 1.5vw;
+    }
+    .form1--input__EMAIL:focus {
+        box-shadow: inset 0.1vw 0.2vw 0.5vw 0vw hsl(180, 1%, 66%);
+    }
+    .form1--input__EMAIL::placeholder {
+        font-size: 1.4vw;
+    }
+    .form1--input__PASSWORD {
+        padding: 0.7vw;
+        font-size: 1.5vw;
+    }
+    .form1--input__PASSWORD:focus {
+        box-shadow: inset 0.1vw 0.2vw 0.5vw 0vw hsl(180, 1%, 66%);
+    }
+    .form1--input__PASSWORD::placeholder {
+        font-size: 1.4vw;
+    }
+    .form1--label {
+        font-size: 1.1vw;
+    }
+    .form1--a__FORGOT {
+        font-size: 1.1vw;
+    }
+    .form1--button {
+        padding: 0.5vw 2vw 0.3vw;
+        font-size: 0.9vw;
+    }
+    .form1--div__LINKS {
+        margin-top: 1.5vw;
+        gap: 1.6vw;    
+    }
+    .form1--i {
+        font-size: 1.7vw;
+    }
+    .form1--a__TO_SIGN {
+        margin-top: 1.5vw;
+        font-size: 1.4vw;
+    }
+    .form2--span__HEAD_NAME {
+        font-size: 1.5vw;
+    }
+    .form2--form {
+        margin-top: 1vw;
+    }
+    .form2--h3 {
+        font-size: 1.4vw;
+    }
+    .form2--input__EMAIL {
+        padding: 0.7vw;
+        font-size: 1.5vw;
+    }
+    .form2--input__EMAIL:focus {
+        box-shadow: inset 0.1vw 0.2vw 0.5vw 0vw hsl(180, 1%, 66%);
+    }
+    .form2--input__EMAIL::placeholder {
+        font-size: 1.4vw;
+    }
+    .form2--input__PASSWORD {
+        padding: 0.7vw;
+        font-size: 1.5vw;
+    }
+    .form2--input__PASSWORD:focus {
+        box-shadow: inset 0.1vw 0.2vw 0.5vw 0vw hsl(180, 1%, 66%);
+    }
+    .form2--input__PASSWORD::placeholder {
+        font-size: 1.4vw;
+    }
+    .form2--button {
+        padding: 0.5vw 2vw 0.3vw;
+        font-size: 0.9vw;
+    }
+    .form2--div__LINKS {
+        margin-top: 1.5vw;
+        gap: 1.6vw;
+    }
+    .form2--i {
+        font-size: 1.7vw;
+    }
+    .form2--p {
+        margin-top: 2vw;
+        font-size: 1.3vw;
+    }
+    .form2--a__TO_LOGIN {
+        margin-top: 1.5vw;
+        font-size: 1.1vw;
+    }
+}
+
+
+
+
+
+
+
+/* ********** ----------  СЕКЦИЯ COMMENTS  ---------- ********** */
+
+
+.comments {
+    display: none;
+}
+
+
+
+
+
+@media (min-width: 740px) {
+    .comments {
+        margin-top: 5vw;
+        padding: 0 10vw;
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+    }
+
+    .commentsHead {
+        padding: 2.5vw 3vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vw;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+
+    .commentsHead--div__HEAD {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    .commentsHead--h3 {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 2.2vw;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .commentsHead--div__LINKS {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 1vw;
+    }
+
+    .commentsHead--a {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.7vw;
+        color: hsl(0, 0%, 0%);
+        text-decoration: none;
+    }
+    @media (any-hover: hover) {
+        .commentsHead--a:hover {
+            color: hsl(0, 0%, 35%);
+            text-decoration: underline hsl(0, 0%, 35%) 0.1vw;
+        }
+    }
+    .commentsHead--a:active {
+        color: hsl(0, 0%, 15%);
+        text-decoration-color: hsl(0, 0%, 15%);
+    }
+    @media (any-hover: none) {
+        .commentsHead--a:active {
+            color: hsl(0, 0%, 45%);
+        }
+    }
+
+    .commentsHead--p {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.7vw;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .commentsHead--form {
+        padding: 1.5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: hsl(0, 0%, 96%);
+    }
+
+    .commentsHead--img {
+        width: 5.5vw;
+    }
+
+    .commentsHead--div__INP_SUBM {
+        display: flex;
+        gap: 0.5vw;
+    }
+
+    .commentsHead--textarea {
+        padding: 1vw;
+        width: 40vw;
+        resize: none;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-size: 2vw;
+        border: 0.1vw solid hsl(0, 0%, 76%);
+    }
+
+    .commentsHead--button {
+        padding: 1vw 2vw;
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.6vw;
+        color: hsl(0, 0%, 100%);
+        background-color: hsl(0, 1%, 22%);
+        border: 0.1vw solid hsl(0, 0%, 76%);
+        cursor: pointer;
+    }
+    @media (any-hover: hover) {
+        .commentsHead--button:hover {
+            background-color: hsl(0, 1%, 37%);
+        }
+    }
+    .commentsHead--button:active {
+        background-color: hsl(0, 5%, 30%);
+    }
+    @media (any-hover: none) {
+        .commentsHead--button:active {
+            background-color: hsl(0, 0%, 35%);
+        }
+    }
+
+    .commentsList {
+        padding: 2.5vw 3vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vw;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+
+    .commentsList--div__HEAD {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .commentsList--h3 {
+        padding-bottom: 1.5vw;
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 2.2vw;
+        color: hsl(0, 0%, 0%);
+    }
+
+    .commentsList--div__LINE {
+        margin: 0.5vw 0 1vw;
+        height: 0.1vw;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+
+    .commentsPages {
+        padding: 2.5vw 3vw;
+        display: flex;
+        justify-content: center;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+
+    .commentsPages--div__LIST {
+        display: flex;
+        justify-content: space-between;
+        gap: 2vw;
+    }
+
+    .commentsPages--p__BUTTON {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.6vw;
+        color: hsl(0, 0%, 0%);
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    .comments {
+        padding: 0 8vw;
+    }
+    .commentsHead {
+        padding: 2.5vw 3vw;
+    }
+    .commentsHead--h3 {
+        font-size: 1.8vw;
+    }
+    .commentsHead--a {
+        font-size: 1.5vw;
+        
+    }
+    .commentsHead--p {
+        font-size: 1.5vw;
+    }
+    .commentsHead--form {
+        padding: 1.3vw;
+    }
+    .commentsHead--img {
+        width: 4.5vw;
+    }
+    .commentsHead--textarea {
+        padding: 0.7vw;
+        width: 38vw;
+        font-size: 1.7vw;
+    }
+    .commentsHead--button {
+        padding: 0.8vw 1.7vw;
+        font-size: 1.3vw;
+    }
+    .commentsList--h3 {
+        font-size: 1.8vw;
+    }
+}
+
+
+
+
+
+
+
+/* ********** ----------  FOOTER ---------- ***********  */
+
+
+.footerMobile {
+    padding: 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    background-color: hsl(240, 1%, 20%);
+}
+
+
+.footerMobile--div__MAIN {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footerMobile--div__FIRST_COL {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+
+.footerMobile--img {
+    width: 28vw;
+}
+
+
+.footerMobile--div__SOCIAL_NETW {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footerMobile--i {
+    font-size: 5vw;
+    color: hsl(0, 0%, 33%);
+}
+.footerMobile--i:active {
+    color: hsl(0, 0%, 50%);
+}
+
+
+.footerMobile--div__SECOND_COL {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+
+.footerMobile--a {
+    font-family: "JosefinSans";
+    font-weight: 300;
+    font-size: 4vw;
+    line-height: 10vw;
+    color: hsl(0, 0%, 50%);
+    text-decoration: none;
+}
+.footerMobile--a:active {
+    color: hsl(0, 0%, 75%);
+}
+
+
+.footerMobile--div__LINE {
+    height: 0.4vw;
+    background-color: hsl(0, 0%, 60%);
+}
+
+
+.footerMobile--div__RIGHTS {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 0.5vw;
+}
+
+
+.footerMobile--p {
+    font-family: "JosefinSans";
+    font-weight: 300;
+    font-size: 4vw;
+    color: hsl(0, 0%, 50%);
+}
+
+
+.footerNoMobile {
+    display: none;
+}
+
+
+
+
+
+@media (min-width: 740px) {
+    .footerMobile {
+        display: none;
+    }
+
+    .footerNoMobile {
+        margin-top: 5vw;
+        padding: 5vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vw;
+        background-color: hsl(0, 0%, 18%);
+    }
+
+    .footerNoMobile--div__MAIN {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footerNoMobile--img {
+        width: 7vw;
+    }
+
+    .footerNoMobile--div__LINKS {
+        padding-top: 0.3vw;
+        display: flex;
+        gap: 1vw;
+    }
+
+    .footerNoMobile--a {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.2vw;
+        color: hsl(0, 0%, 50%);
+        text-decoration: none;
+    }
+    @media (any-hover: hover) {
+        .footerNoMobile--a:hover {
+            color: hsl(0, 0%, 75%);
+        }
+    }
+    .footerNoMobile--a:active {
+        color: hsl(0, 0%, 60%);
+    }
+    @media (any-hover: none) {
+        .footerNoMobile--a:active {
+            color: hsl(0, 0%, 75%);
+        }
+    }
+
+    .footerNoMobile--p__RIGHTS {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.2vw;
+        color: hsl(0, 0%, 50%);
+    }
+
+    .footerNoMobile--div__SOCIAL_NETW {
+        position: absolute;
+        top: 8.5vw;
+        right: 5vw;
+        display: flex;
+        justify-content: flex-end;
+        gap: 2vw;
+    }
+
+    .footerNoMobile--i {
+        font-size: 1.5vw;
+        color: hsl(0, 0%, 33%);
+    }
+    @media (any-hover: hover) {
+        .footerNoMobile--i:hover {
+            color: hsl(0, 0%, 52%);
+        }
+    }
+    .footerNoMobile--i:active {
+        color: hsl(0, 0%, 42%);
+    }
+    @media (any-hover: none) {
+        .footerNoMobile--i:active {
+            color: hsl(0, 0%, 50%);
+        }
+    }
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    .footerNoMobile {
+        gap: 1vw;
+    }
+    .footerNoMobile--img {
+        width: 6vw;
+    }
+    .footerNoMobile--div__LINKS {
+        padding-top: 0.2vw;
+    }
+    .footerNoMobile--a {
+        font-size: 1vw;
+    }
+    .footerNoMobile--p__RIGHTS {
+        font-size: 1vw;
+    }
+    .footerNoMobile--div__SOCIAL_NETW {
+        gap: 1.5vw;
+    }
+    .footerNoMobile--i {
+        font-size: 1.3vw;
+    }
+}
+
+
+
+
+
+
+
+
+/* ********** ----------  СТИЛИ ДЛЯ ПЕЧАТИ ---------- ***********  */
+
+
+@media print {
+
+    .misc12 {
+        padding: 2vw;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+    .misc12--div__HEAD {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .misc12--span__HEAD_NAME {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.8vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+    .misc12--div__SOCIAL_NETW {
+        display: flex;
+        gap: 1vw;
+    }
+    .misc12--i {
+        font-size: 1.3vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+    @media (any-hover: hover) {
+        .misc12--i:hover {
+            color: hsl(0, 0%, 52%);
+        }
+    }
+    .misc12--div__LINE3 {
+        margin: 0.5vw 0 1vw;
+        height: 0.1vw;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+    .misc12--h3 {
+        padding-left: 1vw;
+        font-family: "PlayfairDisplay";
+        font-weight: 900;
+        font-size: 2vw;
+        line-height: 1.2;
+        color: hsl(180, 89%, 18%);
+    }
+    .misc12--div__CHARTS {
+        margin-top: 2vw;
+        padding: 0 0 1vw 1vw;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 2vw;
+    }
+    .misc12--div__TEXT {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3vw;
+    }
+    .misc12--h4 {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.7vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+    .misc12--p {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1.4vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        opacity: 0.7;
+    }
+    /*--- SVG начало ---*/
+    .misc12--svg {
+        width: 7vw;
+        height: 7vw;
+    }
+    .misc12--text__SVG_TEXT {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 3.2vw;
+        line-height: 1.2;
+        fill: hsl(0, 0%, 58%);
+    }
+    /*--- SVG конец ---*/
+    .misc21 {
+        padding: 2vw;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+    .misc21--div__HEAD {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .misc21--span__HEAD_NAME {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.8vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+    .misc21--div__SOCIAL_NETW {
+        display: flex;
+        gap: 1vw;
+    }
+    .misc21--i {
+        font-size: 1.3vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+    .misc21--div__LINE3 {
+        margin: 0.5vw 0 1vw;
+        height: 0.1vw;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+    .misc21--div__TABS {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vw;
+    }
+    .misc21--div__TAB_BUTTONS {
+        display: flex;
+        justify-content: space-around;
+    }
+    .misc21--button__TAB_BUTTON {
+        padding: 0.5vw;
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.2vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .misc21--div__BLOCK {
+        display: none;
+        flex-direction: column;
+        gap: 2.5vw;
+    }
+    .misc21--img__DISH_IMAGE {
+        margin-top: 0.25vw;
+        width: 22%;
+    }
+    .misc21--p:first-of-type {
+        font-family: "JosefinSans";
+        font-weight: 700;
+        font-size: 1.2vw;
+        line-height: 1.5;
+        color: hsl(0, 0%, 0%);
+    }
+    .misc21--p:last-of-type {
+        font-family: "JosefinSans";
+        font-weight: 600;
+        font-size: 1.4vw;
+        line-height: 1.1;
+        color: hsl(0, 0%, 0%);
+    }
+    .misc21--span {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.2vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+    .misc21--div__FOOT {
+        margin-top: 1.5vw;
+        justify-content: flex-end;
+    }
+    .misc21--div__SOCIAL_NETW_FOOT {
+        display: none;
+    }
+    .misc21--a__VIEW {
+        padding: 0.6vw 1vw 0.4vw;
+        font-size: 1.1vw;
+    }
+    .zero--div__MOB_BORDER {
+        display: none;
+    }
+    .misc32 {
+        padding: 2vw;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0 1.7vw 0 hsla(0, 0%, 0%, 0.15);
+    }
+    .misc32--div__HEAD {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .misc32--span__HEAD_NAME {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-style: oblique;
+        font-size: 1.8vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 0%);
+    }
+    .misc32--div__SOCIAL_NETW {
+        display: flex;
+        gap: 1vw;
+    }
+    .misc32--i {
+        font-size: 1.3vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+    @media (any-hover: hover) {
+        .misc32--i:hover {
+            color: hsl(0, 0%, 52%);
+        }
+    }
+    .misc32--div__LINE3 {
+        margin: 0.5vw 0 1vw;
+        height: 0.1vw;
+        opacity: 0.2;
+        background-color: hsl(0, 0%, 33%);
+    }
+    .misc32--h2 {
+        padding: 0.5vw 0 0 1vw;
+        font-family: "PlayfairDisplay";
+        font-weight: 900;
+        font-size: 2vw;
+        line-height: 1.2;
+        color: hsl(180, 89%, 18%);
+    }
+    .misc32--div__CONT {
+        padding: 0 1vw 2vw 2.5vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .misc32--div__GIST {
+        padding: 1vw 0 1vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .misc32--div__BLOCK {
+        display: flex;
+    }
+    .misc32--p__TITLE {
+        opacity: 0.8;
+        writing-mode: vertical-rl;
+        transform: scale(-1);
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.8vw;
+        line-height: 0.8;
+        color: hsl(0, 0%, 33%);
+    }
+    .misc32--div__column {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 0.7vw;
+    }
+    .misc32--p__TIME {
+        writing-mode: vertical-rl;
+        transform: scale(-1);
+        font-family: "OpenSans";
+        font-weight: 300;
+        font-size: 1.5vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 33%);
+    }
+    .misc32--div__SCALE1 {
+        height: 6.8vw;
+        width: 1vw;
+        background-color: hsl(171, 44%, 67%);
+    }
+    .misc32--div__SCALE2 {
+        height: 9.9vw;
+        width: 1vw;
+        background-color: hsl(180, 75%, 20%);
+    }
+    .misc32--div__SCALE3 {
+        height: 13.1vw;
+        width: 1vw;
+        background-color: hsl(333, 100%, 35%);
+    }
+    .misc32--p__FOOT {
+        font-family: "JosefinSans";
+        font-weight: 300;
+        font-size: 1.6vw;
+        line-height: 1.2;
+        color: hsl(0, 0%, 42%);
+    }
+
+}
+
+
+
+
+
+
+
+/* ********** ----------  КЛАССЫ ДЛЯ ОТКРЫТИЯ МЕНЮ НА МОБИЛЬНЫХ УСТРОЙСТВАХ ---------- ***********  */
+
+
+@media (any-hover: none) {
+    .open {
+        display: flex;
+    }
+    .rotateChevron {
+        transform: rotate(180deg);
+    }
+}
